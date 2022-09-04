@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-cn" xmlns="http://www.w3.org/1999/xhtml">
+<!-- saved from url=(0013)about:internet -->
+
+<head>
+  <meta charset="utf-8" http-equiv="X-UA-Compatible" content="IE=5,6,7,8,9,10,11, chrome=1" />
+  <title>Upper</title>
+</head>
+
+<body>
+  <div id="main" style="width: 100%; height: 400px" />
+  <script src="echarts.min.js"></script>
+  <script>
+    let dataTime = ["000:000"];
+    let dataEncoder = [0];
+    let dataTarget = [0];
+
+    option = {
+      grid: {
+        top: "8%",
+        left: "3%",
+        right: "3%",
+      },
+      tooltip: {
+        trigger: "axis",
+        axisPointer: {
+          type: "cross",
+          animation: false,
+          label: {
+            backgroundColor: "#505765",
+          },
+        },
+      },
+      legend: {
+        data: ["测定值", "目标值"],
+      },
+      xAxis: [
+        {
+          type: "category",
+          data: dataTime,
+        },
+      ],
+      yAxis: {
+        type: "value",
+      },
+      series: [
+        {
+          name: "测定值",
+          type: "line",
+          showSymbol: false,
+          data: dataEncoder,
+        },
+        {
+          name: "目标值",
+          type: "line",
+          showSymbol: false,
+          data: dataTarget,
+        },
+      ],
+    };
+    chartLine = echarts.init(document.getElementById("main"));
+    chartLine.setOption(option);
+
+    window.onresize = function () {
+      chartLine.resize();
+    };
+
+    function PushDatas(time, encoder, target) {
+      dataTime.push(time);
+      dataEncoder.push(encoder);
+      dataTarget.push(target);
+
+      if (dataTime.length > 200) {
+        dataTime.shift();
+        dataEncoder.shift();
+        dataTarget.shift();
+      }
+
+      chartLine.setOption(option);
+    }
+
+    function DeleteDatas() {
+      dataTime.length = 0;
+      dataTime.push("000:000");
+      dataEncoder.length = 0;
+      dataEncoder.push(0);
+      dataTarget.length = 0;
+      dataTarget.push(0);
+
+      chartLine.setOption(option);
+    }
+  </script>
+</body>
+
+</html>

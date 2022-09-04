@@ -1,0 +1,7 @@
+{
+    "model_config": "../models",
+    "input": {
+        "type": "usb_camera",
+        "path": "/dev/video0"
+    }
+}

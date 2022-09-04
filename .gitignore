@@ -1,0 +1,16 @@
+__pycache__
+.metadata
+.vscode
+.vs
+
+__model__
+__params__
+
+src/Edgeboard/build/
+
+src/TC212/Debug/
+
+src/Upper/.vs/
+src/Upper/packages/
+src/Upper/Upper/bin/
+src/Upper/Upper/obj/

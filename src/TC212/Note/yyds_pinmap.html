@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Markmap</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #mindmap {
+            display: block;
+            width: 100vw;
+            height: 100vh;
+        }
+
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.2.0/dist/style.css">
+</head>
+
+<body>
+    <svg id="mindmap"></svg>
+    <script src="https://cdn.jsdelivr.net/npm/d3@6.7.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markmap-view@0.2.7"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.2.0/dist/index.umd.min.js"></script>
+    <script>
+        (r => {
+            setTimeout(r);
+        })(() => {
+            const {
+                markmap,
+                mm
+            } = window;
+            const toolbar = new markmap.Toolbar();
+            toolbar.attach(mm);
+            const el = toolbar.render();
+            el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+            document.body.append(el);
+        })
+
+    </script>
+    <script>
+        ((getMarkmap, getOptions, data) => {
+            const {
+                Markmap
+            } = getMarkmap();
+            window.mm = Markmap.create('svg#mindmap', getOptions == null ? void 0 : getOptions(), data);
+        })(() => window.markmap, null, {
+            "t": "heading",
+            "d": 1,
+            "p": {
+                "lines": [0, 1]
+            },
+            "v": "TC212 Core Board",
+            "c": [{
+                "t": "heading",
+                "d": 2,
+                "p": {
+                    "lines": [2, 3]
+                },
+                "v": "2.4G",
+                "c": [{
+                    "t": "list_item",
+                    "d": 4,
+                    "p": {
+                        "lines": [4, 5]
+                    },
+                    "v": "TXD -- P14.0"
+                }, {
+                    "t": "list_item",
+                    "d": 4,
+                    "p": {
+                        "lines": [5, 6]
+                    },
+                    "v": "RXD -- P14.1"
+                }, {
+                    "t": "list_item",
+                    "d": 4,
+                    "p": {
+                        "lines": [6, 7]
+                    },
+                    "v": "RTS -- P11.9"
+                }]
+            }, {
+                "t": "heading",
+                "d": 2,
+                "p": {
+                    "lines": [8, 9]
+                },
+                "v": "Beep",
+                "c": [{
+                    "t": "list_item",
+                    "d": 4,
+                    "p": {
+                        "lines": [10, 11]
+                    },
+                    "v": "CTR -- P02.0"
+                }]
+            }, {
+                "t": "heading",
+                "d": 2,
+                "p": {
+                    "lines": [12, 13]
+                },
+                "v": "Motor",
+                "c": [{
+                    "t": "list_item",
+                    "d": 4,
+                    "p": {
+                        "lines": [14, 15]
+                    },
+                    "v": "PWM -- P11.2"
+                }, {
+                    "t": "list_item",
+                    "d": 4,
+                    "p": {
+                        "lines": [15, 16]
+                    },
+                    "v": "DIR -- P11.3"
+                }]
+            }, {
+                "t": "heading",
+                "d": 2,
+                "p": {
+                    "lines": [17, 18]
+                },
+                "v": "Encoder",
+                "c": [{
+                    "t": "list_item",
+                    "d": 4,
+                    "p": {
+                        "lines": [19, 20]
+                    },
+                    "v": "A -- P33.6"
+                }, {
+                    "t": "list_item",
+                    "d": 4,
+                    "p": {
+                        "lines": [20, 21]
+                    },
+                    "v": "B -- P33.7"
+                }]
+            }, {
+                "t": "heading",
+                "d": 2,
+                "p": {
+                    "lines": [22, 23]
+                },
+                "v": "Servo",
+                "c": [{
+                    "t": "list_item",
+                    "d": 4,
+                    "p": {
+                        "lines": [24, 25]
+                    },
+                    "v": "PWM -- P11.6"
+                }]
+            }, {
+                "t": "heading",
+                "d": 2,
+                "p": {
+                    "lines": [26, 27]
+                },
+                "v": "EdgeBoard",
+                "c": [{
+                    "t": "list_item",
+                    "d": 4,
+                    "p": {
+                        "lines": [28, 29]
+                    },
+                    "v": "TXD -- P02.2"
+                }, {
+                    "t": "list_item",
+                    "d": 4,
+                    "p": {
+                        "lines": [29, 30]
+                    },
+                    "v": "RXD -- P02.3"
+                }]
+            }, {
+                "t": "heading",
+                "d": 2,
+                "p": {
+                    "lines": [31, 32]
+                },
+                "v": "ICM20602",
+                "c": [{
+                    "t": "list_item",
+                    "d": 4,
+                    "p": {
+                        "lines": [33, 34]
+                    },
+                    "v": "SCK  -- P20.11"
+                }, {
+                    "t": "list_item",
+                    "d": 4,
+                    "p": {
+                        "lines": [34, 35]
+                    },
+                    "v": "MOSI -- P20.14"
+                }, {
+                    "t": "list_item",
+                    "d": 4,
+                    "p": {
+                        "lines": [35, 36]
+                    },
+                    "v": "MISO -- P20.12"
+                }, {
+                    "t": "list_item",
+                    "d": 4,
+                    "p": {
+                        "lines": [36, 37]
+                    },
+                    "v": "CS   -- P20.13"
+                }]
+            }]
+        })
+
+    </script>
+</body>
+
+</html>

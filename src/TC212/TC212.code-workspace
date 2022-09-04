@@ -1,0 +1,139 @@
+{
+    "folders": [
+        {
+            "path": "."
+        }
+    ],
+    "settings": {
+        /* 文件排除 */
+        "files.exclude": {
+            // 文件夹
+            "**/.settings": true,
+            "**/Debug": true,
+            "**/Objects": true,
+            "**/objects": true,
+            "**/Listings": true,
+            "**/listings": true,
+            "**/Output": true,
+            "**/output": true,
+            // 文件
+            "**/*.map":true,
+            "**/.config*":true,
+            "**/.project*":true,
+            "**/.cproject*":true,
+            "**/*.POMIN":true,
+            ".gitattributes":true,
+        },
+        /* 编码 */
+        "files.encoding": "utf8",
+        /* 字体 */
+        "editor.fontFamily": "Consolas, OPPOSans",
+        /* 自定义 Shell */
+        "terminal.integrated.profiles.windows": {
+            "RTT-ENV": {
+                "source": "PowerShell",
+                "icon": "terminal",
+                "args": [
+                    "-nologo",
+                    "-noe",
+                    "rttenv.ps1",
+                ]
+            },
+            "ESP-IDF": {
+                "source": "PowerShell",
+                "icon": "terminal",
+                "args": [
+                    "-noe",
+                    "-nologo",
+                    "espidf.ps1"
+                ]
+            }
+        },
+        /* 默认 Shell */
+        "terminal.integrated.defaultProfile.windows": "PowerShell",
+        /* 代码风格 */
+        "C_Cpp.clang_format_style": "{ BasedOnStyle: Google, IndentWidth: 4 }",
+        /* 补全模式 */
+        "C_Cpp.default.intelliSenseMode": "gcc-x86",
+        /* c/cpp 标准 */
+        "C_Cpp.default.cppStandard": "c++14",
+        "C_Cpp.default.cStandard": "c99",
+        /* c/cpp 宏 */
+        "C_Cpp.default.defines": [],
+        /*//!自定义编译器路径 ( 实现补全时 gcc 类编译器只需指定编译器路径与工程目录的包含 ) */
+
+        "idf.path"  : "F:/MyEnv/esp_env/esp-idf-v4.4",
+        "idf.tools" : "F:/MyEnv/esp_env/idf_env/tools",
+
+        "idf.gcc.varsion"   : "esp-2021r1-8.4.0",
+        "idf.patch.version" : "esp-2021r2-patch2-8.4.0",
+
+        "idf.tools.esp32"   : "${config:idf.tools}/xtensa-esp32-elf",
+        "idf.tools.esp32rv" : "${config:idf.tools}/riscv32-esp-elf",
+        "idf.tools.esp32s2" : "${config:idf.tools}/xtensa-esp32s2-elf",
+        "idf.tools.esp32s3" : "${config:idf.tools}/xtensa-esp32s3-elf",
+
+        "idf.gcc.esp32"   : "${config:idf.tools.esp32}/${config:idf.patch.version}/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc.exe",
+        "idf.gcc.esp32rv" : "${config:idf.tools.esp32rv}/${config:idf.patch.version}/riscv32-esp-elf/bin/riscv32-esp-elf-gcc.exe",
+        "idf.gcc.esp32s2" : "${config:idf.tools.esp32s2}/${config:idf.patch.version}/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc.exe",
+        "idf.gcc.esp32s3" : "${config:idf.tools.esp32s3}/${config:idf.patch.version}/xtensa-esp32s3-elf/bin/xtensa-esp32s3-elf-gcc.exe",
+
+        "gcc.path"  : "D:/Maker/Console/arm-gcc/bin/arm-none-eabi-gcc.exe",
+        // "gcc.path"  : "D:/Maker/Console/mingw64/bin/gcc.exe",
+        // "C_Cpp.default.compilerPath": "${config:idf.gcc.esp32}",
+        "C_Cpp.default.compilerPath": "${config:gcc.path}",
+        /* c/cpp 包含 */
+        "C_Cpp.default.includePath": [
+            "${workspaceFolder}/**"
+        ],
+        "C_Cpp.default.forcedInclude": [
+        ],
+        "C_Cpp.default.compileCommands": "${workspaceFolder}/build/compile_commands.json",
+        "files.associations": {
+            "*.cjson": "jsonc",
+            "*.wxss": "css",
+            "*.wxs": "javascript",
+            "*.o": "plist",
+            "scu.h": "c",
+            "ifxcpu.h": "c",
+            "bsp.h": "c",
+            "uart.h": "c",
+            "xcmd.h": "c"
+        },
+    },
+    "tasks": {
+        "version": "2.0.0",
+        /* 任务 */
+        "tasks": [
+            {
+                "type": "shell",
+                "label": "build",
+                "command": "powershell",
+                "args": [
+                    "${workspaceFolder}/.vscode/build-keil.ps1"
+                ],
+                "options": {
+                    "cwd": "${workspaceFolder}"
+                },
+                "group": {
+                    "kind": "build",
+                    "isDefault": true
+                }
+            }
+        ]
+    },
+    "launch": {
+        /* 运行 */
+        "configurations": [
+            {
+                "name": "Launch",
+                "type": "cortex-debug",
+                "request": "launch",
+                "executable": "jlink",
+                "cwd": "${workspaceRoot}",
+                "runToMain": true
+            },
+        ],
+        "compounds": []
+    }
+}

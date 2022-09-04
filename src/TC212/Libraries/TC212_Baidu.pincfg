@@ -1,0 +1,84 @@
+<v1:pinSettings xmlns:v1="http://www.tasking.com/schema/pinsettings/v1.1">
+  <v1:pinMappingsRef version="1.12" file="platform:/plugin/com.tasking.pinmapper.input.aurix/etc/TC22xA_pinmappings.xml"/>
+  <v1:deviceSetting id="tc22xa" pattern="TC222* A">
+    <v1:packageSetting id="tqfp80"/>
+  </v1:deviceSetting>
+  <v1:configSetting configurationId="scu.hwcfg4.bind" altId="scu.hwcfg4.bind.hwcfg4">
+    <v1:connectionSetting altId="p10_5.in.bind.in"/>
+  </v1:configSetting>
+  <v1:configSetting configurationId="porst_n.in.bind" altId="porst_n.in.bind.in">
+    <v1:connectionSetting altId="scu.porst.bind.porst"/>
+  </v1:configSetting>
+  <v1:configSetting configurationId="p14_3.in.bind" altId="p14_3.in.bind.in">
+    <v1:connectionSetting altId="scu.hwcfg3.bind.hwcfg3"/>
+  </v1:configSetting>
+  <v1:configSetting configurationId="scu.hwcfg5.bind" altId="scu.hwcfg5.bind.hwcfg5">
+    <v1:connectionSetting altId="p10_6.in.bind.in"/>
+  </v1:configSetting>
+  <v1:configSetting configurationId="scu.hwcfg3.bind" altId="scu.hwcfg3.bind.hwcfg3">
+    <v1:connectionSetting altId="p14_3.in.bind.in"/>
+  </v1:configSetting>
+  <v1:configSetting configurationId="p10_6.in.bind" altId="p10_6.in.bind.in">
+    <v1:connectionSetting altId="scu.hwcfg5.bind.hwcfg5"/>
+  </v1:configSetting>
+  <v1:configSetting configurationId="p10_5.in.bind" altId="p10_5.in.bind.in">
+    <v1:connectionSetting altId="scu.hwcfg4.bind.hwcfg4"/>
+  </v1:configSetting>
+  <v1:configSetting configurationId="scu.porst.bind" altId="scu.porst.bind.porst">
+    <v1:connectionSetting altId="porst_n.in.bind.in"/>
+  </v1:configSetting>
+  <v1:configSetting configurationId="p00_0.out.bind" altId="p00_0.out.bind.gpio"/>
+  <v1:configSetting configurationId="p00_0.dir" altId="p00_0.dir.out"/>
+  <v1:configSetting configurationId="p02_7.out.bind" altId="p02_7.out.bind.gpio"/>
+  <v1:configSetting configurationId="p02_4.out.bind" altId="p02_4.out.bind.none"/>
+  <v1:configSetting configurationId="p02_6.dir" altId="p02_6.dir.out"/>
+  <v1:configSetting configurationId="p02_5.out.bind" altId="p02_5.out.bind.none"/>
+  <v1:configSetting configurationId="p02_7.dir" altId="p02_7.dir.out"/>
+  <v1:configSetting configurationId="p02_6.out.bind" altId="p02_6.out.bind.gpio"/>
+  <v1:configSetting configurationId="p02_0.dir" altId="p02_0.dir.out"/>
+  <v1:configSetting configurationId="p02_4.dir" altId="p02_4.dir.out"/>
+  <v1:configSetting configurationId="p02_0.out.bind" altId="p02_0.out.bind.gpio"/>
+  <v1:configSetting configurationId="p02_5.dir" altId="p02_5.dir.out"/>
+  <v1:propertySetting propertyId="p02_6.comment" value="LED2"/>
+  <v1:propertySetting propertyId="p02_0.symbolicname" value="BUZZ"/>
+  <v1:propertySetting propertyId="p02_7.comment" value="LED3"/>
+  <v1:propertySetting propertyId="p02_0.comment" value="BUZZ"/>
+  <v1:propertySetting propertyId="p02_6.symbolicname" value="LED2"/>
+  <v1:propertySetting propertyId="p02_7.symbolicname" value="LED3"/>
+  <v1:configSetting configurationId="p02_8.dir" altId="p02_8.dir.out"/>
+  <v1:configSetting configurationId="p02_8.out.bind" altId="p02_8.out.bind.gpio"/>
+  <v1:propertySetting propertyId="p00_0.comment" value="LED5"/>
+  <v1:propertySetting propertyId="p00_0.symbolicname" value="LED5"/>
+  <v1:propertySetting propertyId="p02_8.symbolicname" value="LED4"/>
+  <v1:propertySetting propertyId="p02_8.comment" value="LED4"/>
+  <v1:configSetting configurationId="p11_3.out.bind" altId="p11_3.out.bind.gpio"/>
+  <v1:configSetting configurationId="p11_3.dir" altId="p11_3.dir.out"/>
+  <v1:propertySetting propertyId="p11_3.comment" value="Dir"/>
+  <v1:propertySetting propertyId="p11_3.symbolicname" value="DIR"/>
+  <v1:configSetting configurationId="p11_9.in.mode" altId="p11_9.in.mode.pd"/>
+  <v1:configSetting configurationId="p11_9.dir" altId="p11_9.dir.in"/>
+  <v1:configSetting configurationId="p11_9.in.bind" altId="p11_9.in.bind.gpio"/>
+  <v1:propertySetting propertyId="p11_9.comment" value="DTS"/>
+  <v1:propertySetting propertyId="p11_9.symbolicname" value="DTS"/>
+  <v1:configSetting configurationId="p02_1.dir" altId="p02_1.dir.in"/>
+  <v1:configSetting configurationId="p02_1.in.bind" altId="p02_1.in.bind.gpio"/>
+  <v1:configSetting configurationId="p02_1.in.mode" altId="p02_1.in.mode.pu"/>
+  <v1:propertySetting propertyId="p02_1.comment" value="POWER"/>
+  <v1:propertySetting propertyId="p02_1.symbolicname" value="POWER"/>
+  <v1:configSetting configurationId="p20_11.out.bind" altId="p20_11.out.bind.gpio"/>
+  <v1:configSetting configurationId="p20_11.dir" altId="p20_11.dir.out"/>
+  <v1:propertySetting propertyId="p20_11.symbolicname" value="RGB1"/>
+  <v1:propertySetting propertyId="p20_11.comment" value="RGB1"/>
+  <v1:propertySetting propertyId="p20_12.symbolicname" value="GPIO1"/>
+  <v1:propertySetting propertyId="p20_12.comment" value="RGB2"/>
+  <v1:configSetting configurationId="p20_14.dir" altId="p20_14.dir.out"/>
+  <v1:configSetting configurationId="p20_13.dir" altId="p20_13.dir.out"/>
+  <v1:configSetting configurationId="p20_12.dir" altId="p20_12.dir.out"/>
+  <v1:propertySetting propertyId="p20_13.symbolicname" value="GPIO2"/>
+  <v1:propertySetting propertyId="p20_14.symbolicname" value="GPIO3"/>
+  <v1:propertySetting propertyId="p20_14.comment" value="RGB4"/>
+  <v1:propertySetting propertyId="p20_13.comment" value="RGB3"/>
+  <v1:configSetting configurationId="p20_12.out.bind" altId="p20_12.out.bind.gpio"/>
+  <v1:configSetting configurationId="p20_13.out.bind" altId="p20_13.out.bind.gpio"/>
+  <v1:configSetting configurationId="p20_14.out.bind" altId="p20_14.out.bind.gpio"/>
+</v1:pinSettings>

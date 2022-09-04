@@ -1,0 +1,165 @@
+{
+    "folders": [
+        {
+            "path": "./"
+        }
+    ],
+    "settings": {
+        /* 编码 */
+        "files.encoding": "utf8",
+        "files.autoSave": "onFocusChange",
+        /* 字体 */
+        "editor.fontSize": 15,
+        "editor.fontFamily": "'Fira Code', Consolas, 'Courier New', monospace",
+        "editor.fontLigatures": true,
+        "editor.formatOnSave": true,
+        "editor.bracketPairColorization.enabled": true,
+        "editor.guides.bracketPairs": "active",
+        /* 补全模式 */
+        "C_Cpp.autocompleteAddParentheses": true,
+        "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
+        "C_Cpp.default.intelliSenseMode": "gcc-arm64",
+        "C_Cpp.intelliSenseCacheSize": 512,
+        /* c/cpp 标准 */
+        "C_Cpp.default.cppStandard": "c++14",
+        "C_Cpp.default.cStandard": "c99",
+        /* c/cpp 宏 */
+        "C_Cpp.default.defines": [],
+        "C_Cpp.default.compilerPath": "/usr/bin/gcc",
+        /* c/cpp 包含 */
+        "C_Cpp.default.includePath": [
+            "${workspaceFolder}/**"
+        ],
+        /* c/cpp 格式*/
+        "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, UseTab: Never, IndentWidth: 4, TabWidth: 4, AllowShortIfStatementsOnASingleLine: false, ColumnLimit: 0 }",
+        "C_Cpp.clang_format_style": "{ BasedOnStyle: Google, UseTab: Never, IndentWidth: 4, TabWidth: 4, AllowShortIfStatementsOnASingleLine: false, ColumnLimit: 0 }",
+        "files.associations": {
+            "*.tcc": "cpp",
+            "cctype": "cpp",
+            "clocale": "cpp",
+            "cmath": "cpp",
+            "csignal": "cpp",
+            "cstdarg": "cpp",
+            "cstddef": "cpp",
+            "cstdio": "cpp",
+            "cstdlib": "cpp",
+            "cstring": "cpp",
+            "ctime": "cpp",
+            "cwchar": "cpp",
+            "cwctype": "cpp",
+            "any": "cpp",
+            "array": "cpp",
+            "atomic": "cpp",
+            "bitset": "cpp",
+            "chrono": "cpp",
+            "complex": "cpp",
+            "condition_variable": "cpp",
+            "cstdint": "cpp",
+            "deque": "cpp",
+            "forward_list": "cpp",
+            "list": "cpp",
+            "unordered_map": "cpp",
+            "vector": "cpp",
+            "exception": "cpp",
+            "algorithm": "cpp",
+            "functional": "cpp",
+            "iterator": "cpp",
+            "map": "cpp",
+            "memory": "cpp",
+            "memory_resource": "cpp",
+            "numeric": "cpp",
+            "optional": "cpp",
+            "ratio": "cpp",
+            "set": "cpp",
+            "string": "cpp",
+            "string_view": "cpp",
+            "system_error": "cpp",
+            "tuple": "cpp",
+            "type_traits": "cpp",
+            "utility": "cpp",
+            "fstream": "cpp",
+            "initializer_list": "cpp",
+            "iomanip": "cpp",
+            "iosfwd": "cpp",
+            "iostream": "cpp",
+            "istream": "cpp",
+            "limits": "cpp",
+            "mutex": "cpp",
+            "new": "cpp",
+            "ostream": "cpp",
+            "sstream": "cpp",
+            "stdexcept": "cpp",
+            "streambuf": "cpp",
+            "thread": "cpp",
+            "cinttypes": "cpp",
+            "typeinfo": "cpp",
+            "valarray": "cpp",
+            "bit": "cpp",
+            "compare": "cpp",
+            "concepts": "cpp",
+            "random": "cpp",
+            "numbers": "cpp",
+            "semaphore": "cpp",
+            "stop_token": "cpp",
+            "xstring": "cpp"
+        },
+    },
+    "tasks": {
+        "version": "2.0.0",
+        /* 任务 */
+        "tasks": [
+            {
+                "label": "mkdir",
+                "type": "shell",
+                "command": "mkdir build -p"
+            },
+            {
+                "label": "cmake",
+                "type": "shell",
+                "command": "cmake ..",
+                "dependsOn": [
+                    "mkdir"
+                ],
+                "options": {
+                    "cwd": "${workspaceFolder}/build"
+                },
+                "problemMatcher": []
+            },
+            {
+                "label": "make",
+                "type": "shell",
+                "command": "make -j3",
+                "options": {
+                    "cwd": "${workspaceFolder}/build"
+                },
+                "problemMatcher": []
+            }
+        ]
+    },
+    "launch": {
+        "version": "0.2.0",
+        "configurations": [
+            {
+                "name": "(gdb) Launch",
+                "type": "cppdbg",
+                "request": "launch",
+                "program": "${workspaceFolder}/build/yyds",
+                "args": [
+                    "-l"
+                ],
+                "stopAtEntry": false,
+                "cwd": "${workspaceFolder}/build",
+                "environment": [],
+                "externalConsole": false,
+                "MIMode": "gdb",
+                "setupCommands": [
+                    {
+                        "description": "Enable pretty-printing for gdb",
+                        "text": "-enable-pretty-printing",
+                        "ignoreFailures": true
+                    }
+                ]
+            }
+        ]
+    }
+}
