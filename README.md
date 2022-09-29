@@ -1,12 +1,21 @@
 # 蓝电 YYDS Car
 
+湖北工业大学 - 蓝电 YYDS Car  
+第十七届全国大学生智能汽车竞赛 - 完全模型组
+
+校赛(第一名) -> 华南赛区(第四名) -> 国赛(线下第五名 - 全国一等奖)
+
 ---
 
 ![-](images/pic-index.jpg)
 
+---
+
 ## Edgeboard 程序
 
-Edgeboard 完成摄像头的识别、下发控制命令。
+> 在此感谢以下开源算法:   
+> 上海交通大学: <https://github.com/SJTU-AuTop/RT1064-Code>  
+> 完全模型组官方: <https://github.com/Leo-smart/Intelligentcar2022-FZ3B>  
 
 - [x] 基础元素识别、打印
 
